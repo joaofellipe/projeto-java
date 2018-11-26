@@ -56,4 +56,29 @@ public class Notebook {
 				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
+	public Notebook(int numero, String dataEmissao, String formaDePagamento, double valorTotal, String situacao) {
+		super();
+		this.numero = numero;
+		this.dataEmissao = dataEmissao;
+		this.formaDePagamento = formaDePagamento;
+		this.valorTotal = valorTotal;
+		this.situacao = situacao;
+
+	}
+
+	public void mostrar() {
+		// Mostrar usuário
+		System.out.println("\n\nNotebook:\n");
+		System.out.println("DataEmissao: " + this.dataEmissao);
+		System.out.println("FormaDePagamento: " + this.formaDePagamento);
+		System.out.println("ValorTotal: " + this.valorTotal);
+		System.out.println("Situacao: " + this.situacao);
+
+	}
+
+	public Notebook() {
+		super();
+		// super faz referência à super classe
+		// toda classe java é sub classe da classe Object
+	}
 }

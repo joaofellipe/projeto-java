@@ -75,4 +75,31 @@ public class Pedido {
 				+ ", toString()=" + super.toString() + "]";
 	}
 
+	public Pedido(String logradouro, String numero, String complemento, String bairro, String cidade, String estado,
+			String cep) {
+		super();
+		this.logradouro = logradouro;
+		this.numero = numero;
+		this.complemento = complemento;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.estado = estado;
+	}
+
+	public void mostrar() {
+		// Mostrar usuário
+		System.out.println("\n\nPedido:\n");
+		System.out.println("Logradouro: " + this.logradouro);
+		System.out.println("Complemento: " + this.complemento);
+		System.out.println("Bairro: " + this.bairro);
+		System.out.println("Cidade: " + this.cidade);
+		System.out.println("Estado: " + this.estado);
+		System.out.println("Cep : " + this.estado);
+	}
+
+	public Pedido() {
+		super();
+		// super faz referência à super classe
+		// toda classe java é sub classe da classe Object
+	}
 }
