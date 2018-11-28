@@ -6,6 +6,7 @@ import util.*;
 public class InfoNote {
 	public static void main(String[] args) {
 		int opcao = 8;
+		do {
 		info.mostrarMenu();
 		opcao = Teclado.lerInt("Digite sua opção: ");
 		switch (opcao) {
@@ -42,7 +43,7 @@ public class InfoNote {
 			System.out.println("Opção inválida!");
 		}
 		Teclado.lerTexto("Pressione uma tecla para continuar...");
-		do {
+		
 		} while (opcao != 8);
 	}
 
