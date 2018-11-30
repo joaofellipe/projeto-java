@@ -4,6 +4,13 @@ import model.*;
 import util.*;
 
 public class InfoNote {
+	Usuario user;
+	boolean logado = false;
+	int opcao = 8;
+
+	Notebook notebooks[] = new Notebook[10];
+	Pedido pedido;
+
 	public static void main(String[] args) {
 
 		InfoNote info = new InfoNote();
@@ -20,7 +27,7 @@ public class InfoNote {
 				info.cadastrarUsuario();
 				break;
 			case 3:
-				info.buscarNotebook1();
+				info.buscarNotebook();
 				break;
 			case 4:
 				info.manterCarrinho();
@@ -49,13 +56,6 @@ public class InfoNote {
 
 		} while (opcao != 8);
 	}
-
-	Usuario user;
-	boolean logado = false;
-	int opcao = 8;
-
-	Notebook notebooks[] = new Notebook[10];
-	Pedido pedido;
 
 	public InfoNote() {
 		notebooks[0] = new Notebook(1, "Negativo N22BR", "CPU Intel Core 2 Duo, Memória 2 GB, HD 250 GB", 6, 1200.00,
@@ -124,7 +124,11 @@ public class InfoNote {
 	}
 
 	public void buscarNotebook() {
-		System.out.println("buscarNotebook - Em Construção");
+		for (int i = 0; i < notebooks.length; i++) {
+			if (notebooks[i] != null) {
+				System.out.println(notebooks[i].getNumeroNote() + "-----" + notebooks[i].getModelo());
+			}
+		}
 	}
 
 	public void manterCarrinho() {
@@ -135,8 +139,6 @@ public class InfoNote {
 		System.out.println("efetuarCompra - Em Construção");
 
 	}
-
-	InfoNote info = new InfoNote();
 
 	@SuppressWarnings("unlikely-arg-type")
 	public void inserirNotebook() {

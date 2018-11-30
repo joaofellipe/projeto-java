@@ -4,55 +4,56 @@ import model.*;
 import util.*;
 
 public class InfoNote {
+	Usuario user;
+	boolean logado = false;
+	int opcao = 8;
 	public static void main(String[] args) {
-		
+
 		InfoNote info = new InfoNote();
 		int opcao = 8;
 		info.mostrarMenu();
 		opcao = Teclado.LerInt("Digite sua opção: ");
-		
+
 		do {
-		switch (opcao) {
-		case 1:
-			info.efetuarLogin();
-			break;
-		case 2:
-			info.cadastrarUsuario();
-			break;
-		case 3:
-			info.buscarNotebook();
-			break;
-		case 4:
-			info.manterCarrinho();
-			break;
-		case 5:
-			info.manterCarrinho();
-			break;
-		case 6:
-			info.manterCarrinho();
-			break;
-		case 7:
-			if (!info.logado) {
-				System.out.println("Efetue login para efetuar compra.");
+			switch (opcao) {
+			case 1:
+				info.efetuarLogin();
 				break;
-			} else {
-				info.efetuarCompra();
+			case 2:
+				info.cadastrarUsuario();
 				break;
+			case 3:
+				info.buscarNotebook();
+				break;
+			case 4:
+				info.manterCarrinho();
+				break;
+			case 5:
+				info.manterCarrinho();
+				break;
+			case 6:
+				info.manterCarrinho();
+				break;
+			case 7:
+				if (!info.logado) {
+					System.out.println("Efetue login para efetuar compra.");
+					break;
+				} else {
+					info.efetuarCompra();
+					break;
+				}
+			case 8:
+				System.out.println("Saída do Sistema.");
+				break;
+			default:
+				System.out.println("Opção inválida!");
 			}
-		case 8:
-			System.out.println("Saída do Sistema.");
-			break;
-		default:
-			System.out.println("Opção inválida!");
-		}
-		Teclado.LerTexto("Pressione uma tecla para continuar...");
-		
+			Teclado.LerTexto("Pressione uma tecla para continuar...");
+
 		} while (opcao != 8);
 	}
 
-	Usuario user;
-	boolean logado = false;
-	int opcao = 8;
+
 
 	public void mostrarMenu() {
 		System.out.println("=================================================");
