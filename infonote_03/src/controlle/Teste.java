@@ -34,10 +34,10 @@ public class Teste {
 		Note1.mostrar();
 
 		Notebook Note2 = new Notebook( 20250122, "Rs200", "Modelo Completo", 10, 4200.00, "figura", "01012018");
-		Note1.mostrar();
+		Note2.mostrar();
 
 		Notebook Note3 = new Notebook( 20250122, "Rs200", "Modelo Completo", 10, 4200.00, "figura", "01012018");
-		Note1.mostrar();
+		Note3.mostrar();
 
 	}
 }
