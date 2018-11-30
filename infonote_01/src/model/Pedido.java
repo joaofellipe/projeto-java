@@ -1,78 +1,60 @@
 package model;
 
 public class Pedido {
-	public String getLogradouro() {
-		return logradouro;
-	}
 
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
+	public int numero;
+	public String dataEmissao;
+	public String formaDePagamento;
+	public double valorTotal;
+	public String situacao;
 
-	public String getNumero() {
+	public int getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 
-	public String getComplemento() {
-		return complemento;
+	public String getDataEmissao() {
+		return dataEmissao;
 	}
 
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
+	public void setDataEmissao(String dataEmissao) {
+		this.dataEmissao = dataEmissao;
 	}
 
-	public String getBairro() {
-		return bairro;
+	public String getFormaDePagamento() {
+		return formaDePagamento;
 	}
 
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
+	public void setFormaDePagamento(String formaDePagamento) {
+		this.formaDePagamento = formaDePagamento;
 	}
 
-	public String getCidade() {
-		return cidade;
+	public double getValorTotal() {
+		return valorTotal;
 	}
 
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setValorTotal(double valorTotal) {
+		this.valorTotal = valorTotal;
 	}
 
-	public String getEstado() {
-		return estado;
+	public String getSituacao() {
+		return situacao;
 	}
 
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	private String logradouro;
-	private String numero;
-	private String complemento;
-	private String bairro;
-	private String cidade;
-	private String estado;
-	private String cep;
 
 	@Override
 	public String toString() {
-		return "Pedido [logradouro=" + logradouro + ", numero=" + numero + ", complemento=" + complemento + ", bairro="
-				+ bairro + ", cidade=" + cidade + ", estado=" + estado + ", cep=" + cep + ", getLogradouro()="
-				+ getLogradouro() + ", getNumero()=" + getNumero() + ", getComplemento()=" + getComplemento()
-				+ ", getBairro()=" + getBairro() + ", getCidade()=" + getCidade() + ", getEstado()=" + getEstado()
-				+ ", getCep()=" + getCep() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Pedido [numero=" + numero + ", dataEmissao=" + dataEmissao + ", formaDePagamento=" + formaDePagamento
+				+ ", valorTotal=" + valorTotal + ", situacao=" + situacao + ", getNumero()=" + getNumero()
+				+ ", getDataEmissao()=" + getDataEmissao() + ", getFormaDePagamento()=" + getFormaDePagamento()
+				+ ", getValorTotal()=" + getValorTotal() + ", getSituacao()=" + getSituacao() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 
 }

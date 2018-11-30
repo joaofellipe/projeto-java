@@ -1,8 +1,9 @@
 package model;
 
 public class ItemDePedido {
-	int qtde;
-	double subtotal;
+
+	public int qtde;
+	public double subtotal;
 
 	public int getQtde() {
 		return qtde;
@@ -22,7 +23,7 @@ public class ItemDePedido {
 
 	@Override
 	public String toString() {
-		return "ItemDePedido [qtde=" + qtde + ", subtotal=" + subtotal + ", getQtde()=" + getQtde() + ", getSubtotal()="
+		return "ItenDePedido [qtde=" + qtde + ", subtotal=" + subtotal + ", getQtde()=" + getQtde() + ", getSubtotal()="
 				+ getSubtotal() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
 	}

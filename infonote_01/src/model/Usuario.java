@@ -1,6 +1,14 @@
 package model;
 
 public class Usuario {
+
+	public int matricula;
+	public String login;
+	public String senha;
+	public String nome;
+	public String email;
+	public String telefone;
+
 	public int getMatricula() {
 		return matricula;
 	}
@@ -48,13 +56,6 @@ public class Usuario {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
-	private int matricula;
-	private String login;
-	private String senha;
-	private String nome;
-	private String email;
-	private String telefone;
 
 	@Override
 	public String toString() {

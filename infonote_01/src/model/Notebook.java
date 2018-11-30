@@ -1,58 +1,78 @@
 package model;
 
 public class Notebook {
-	public int getNumero() {
-		return numero;
+
+	public int numeroNote;
+	public String modelo;
+	public String descricao;
+	public int estoque;
+	public double precoUnitario;
+	public String figura;
+	public String dataCadastro;
+
+	public int getNumeroNote() {
+		return numeroNote;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public void setNumeroNote(int numeroNote) {
+		this.numeroNote = numeroNote;
 	}
 
-	public String getDataEmissao() {
-		return dataEmissao;
+	public String getModelo() {
+		return modelo;
 	}
 
-	public void setDataEmissao(String dataEmissao) {
-		this.dataEmissao = dataEmissao;
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
 
-	public String getFormaDePagamento() {
-		return formaDePagamento;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setFormaDePagamento(String formaDePagamento) {
-		this.formaDePagamento = formaDePagamento;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public double getValorTotal() {
-		return valorTotal;
+	public int getEstoque() {
+		return estoque;
 	}
 
-	public void setValorTotal(double valorTotal) {
-		this.valorTotal = valorTotal;
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
 	}
 
-	public String getSituacao() {
-		return situacao;
+	public double getPrecoUnitario() {
+		return precoUnitario;
 	}
 
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
+	public void setPrecoUnitario(double precoUnitario) {
+		this.precoUnitario = precoUnitario;
 	}
 
-	private int numero;
-	private String dataEmissao;
-	private String formaDePagamento;
-	private double valorTotal;
-	private String situacao;
+	public String getFigura() {
+		return figura;
+	}
+
+	public void setFigura(String figura) {
+		this.figura = figura;
+	}
+
+	public String getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(String dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
 
 	@Override
 	public String toString() {
-		return "Notebook [numero=" + numero + ", dataEmissao=" + dataEmissao + ", formaDePagamento=" + formaDePagamento
-				+ ", valorTotal=" + valorTotal + ", situacao=" + situacao + ", getNumero()=" + getNumero()
-				+ ", getDataEmissao()=" + getDataEmissao() + ", getFormaDePagamento()=" + getFormaDePagamento()
-				+ ", getValorTotal()=" + getValorTotal() + ", getSituacao()=" + getSituacao() + ", getClass()="
+		return "Notebook [numeroNote=" + numeroNote + ", modelo=" + modelo + ", descricao=" + descricao + ", estoque="
+				+ estoque + ", precoUnitario=" + precoUnitario + ", figura=" + figura + ", dataCadastro=" + dataCadastro
+				+ ", getNumeroNote()=" + getNumeroNote() + ", getModelo()=" + getModelo() + ", getDescricao()="
+				+ getDescricao() + ", getEstoque()=" + getEstoque() + ", getPrecoUnitario()=" + getPrecoUnitario()
+				+ ", getFigura()=" + getFigura() + ", getDataCadastro()=" + getDataCadastro() + ", getClass()="
 				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 

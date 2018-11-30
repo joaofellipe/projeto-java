@@ -1,84 +1,108 @@
 package model;
 
 public class Notebook {
-	public int getNumero() {
-		return numero;
-	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	public String getDataEmissao() {
-		return dataEmissao;
-	}
-
-	public void setDataEmissao(String dataEmissao) {
-		this.dataEmissao = dataEmissao;
-	}
-
-	public String getFormaDePagamento() {
-		return formaDePagamento;
-	}
-
-	public void setFormaDePagamento(String formaDePagamento) {
-		this.formaDePagamento = formaDePagamento;
-	}
-
-	public double getValorTotal() {
-		return valorTotal;
-	}
-
-	public void setValorTotal(double valorTotal) {
-		this.valorTotal = valorTotal;
-	}
-
-	public String getSituacao() {
-		return situacao;
-	}
-
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
-	}
-
-	private int numero;
-	private String dataEmissao;
-	private String formaDePagamento;
-	private double valorTotal;
-	private String situacao;
-
-	@Override
-	public String toString() {
-		return "Notebook [numero=" + numero + ", dataEmissao=" + dataEmissao + ", formaDePagamento=" + formaDePagamento
-				+ ", valorTotal=" + valorTotal + ", situacao=" + situacao + ", getNumero()=" + getNumero()
-				+ ", getDataEmissao()=" + getDataEmissao() + ", getFormaDePagamento()=" + getFormaDePagamento()
-				+ ", getValorTotal()=" + getValorTotal() + ", getSituacao()=" + getSituacao() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-	}
-
-	public Notebook(int numero, String dataEmissao, String formaDePagamento, double valorTotal, String situacao) {
-		super();
-		this.numero = numero;
-		this.dataEmissao = dataEmissao;
-		this.formaDePagamento = formaDePagamento;
-		this.valorTotal = valorTotal;
-		this.situacao = situacao;
-
-	}
+	private int numeroNote;
+	private String modelo;
+	private String descricao;
+	private int estoque;
+	private double precoUnitario;
+	private String figura;
+	private String dataCadastro;
 
 	public void mostrar() {
-		// Mostrar usuário
-		System.out.println("\n\nNotebook:\n");
-		System.out.println("DataEmissao: " + this.dataEmissao);
-		System.out.println("FormaDePagamento: " + this.formaDePagamento);
-		System.out.println("ValorTotal: " + this.valorTotal);
-		System.out.println("Situacao: " + this.situacao);
 
+		// Mostrar usuário
+		System.out.println("numeroNote" + this.numeroNote);
+		System.out.println("modelo" + this.modelo);
+		System.out.println("descricao" + this.descricao);
+		System.out.println("estoque" + this.estoque);
+		System.out.println("precoUnitario" + this.precoUnitario);
+		System.out.println("figura" + this.figura);
+		System.out.println("dataCadastro" + this.dataCadastro + "\n");
+
+	}
+
+	public Notebook(int numeroNote, String modelo, String descricao, int estoque, double precoUnitario, String figura,
+			String dataCadastro) {
+		super();
+		this.numeroNote = numeroNote;
+		this.modelo = modelo;
+		this.descricao = descricao;
+		this.estoque = estoque;
+		this.precoUnitario = precoUnitario;
+		this.figura = figura;
+		this.dataCadastro = dataCadastro;
 	}
 
 	public Notebook() {
 		super();
-		// super faz referência à super classe
-		// toda classe java é sub classe da classe Object
 	}
+
+	public int getNumeroNote() {
+		return numeroNote;
+	}
+
+	public void setNumeroNote(int numeroNote) {
+		this.numeroNote = numeroNote;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getEstoque() {
+		return estoque;
+	}
+
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
+	}
+
+	public double getPrecoUnitario() {
+		return precoUnitario;
+	}
+
+	public void setPrecoUnitario(double precoUnitario) {
+		this.precoUnitario = precoUnitario;
+	}
+
+	public String getFigura() {
+		return figura;
+	}
+
+	public void setFigura(String figura) {
+		this.figura = figura;
+	}
+
+	public String getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(String dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
+
+	@Override
+	public String toString() {
+		return "Notebook [numeroNote=" + numeroNote + ", modelo=" + modelo + ", descricao=" + descricao + ", estoque="
+				+ estoque + ", precoUnitario=" + precoUnitario + ", figura=" + figura + ", dataCadastro=" + dataCadastro
+				+ ", getNumeroNote()=" + getNumeroNote() + ", getModelo()=" + getModelo() + ", getDescricao()="
+				+ getDescricao() + ", getEstoque()=" + getEstoque() + ", getPrecoUnitario()=" + getPrecoUnitario()
+				+ ", getFigura()=" + getFigura() + ", getDataCadastro()=" + getDataCadastro() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
 }
