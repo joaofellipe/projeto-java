@@ -138,6 +138,7 @@ public class InfoNote {
 
 	InfoNote info = new InfoNote();
 
+	@SuppressWarnings("unlikely-arg-type")
 	public void inserirNotebook() {
 		// Lê o notebook escolhido do teclado
 		String numeroNote = Teclado.LerTexto("Informe o número do notebook" + " para compra: ");
