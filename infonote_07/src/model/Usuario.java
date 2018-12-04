@@ -44,9 +44,13 @@ public abstract class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [login=" + login + ", senha=" + senha + ", tipo=" + tipo + ", getLogin()=" + getLogin()
+		final String ENTER = "\n";
+		String retValue = "";
+		retValue= "Usuario [login=" + login + ", senha=" + senha + ", tipo=" + tipo + ", getLogin()=" + getLogin()
 				+ ", getSenha()=" + getSenha() + ", getTipo()=" + getTipo() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		
+    return retValue;	
 	}
 
 }
