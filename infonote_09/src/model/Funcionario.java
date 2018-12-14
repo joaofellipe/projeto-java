@@ -27,4 +27,12 @@ public class Funcionario extends Usuario implements IUsuario {
 	}
 	return false;
 	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [matricula=" + matricula + ", getMatricula()=" + getMatricula() + ", getLogin()="
+				+ getLogin() + ", getSenha()=" + getSenha() + ", getTipo()=" + getTipo() + ", toString()="
+				+ super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+	
 }

@@ -86,7 +86,10 @@ public class InfoNote {
 		System.out.println("=========================================================");
 		String login = Teclado.lerTexto("Login: ");
 		String senha = Teclado.lerTexto("Senha: ");
-		int tipo = Teclado.lerInt("Tipo: ");
+		if (senha.equals("") || senha == null) {
+			senha = GerarSenha.gerarSenha();
+			System.out.println("Senha gerada: " + senha);
+		}
 		String codigoCliente = Teclado.lerTexto("codigo Cliente:");
 		String nome = Teclado.lerTexto("Nome: ");
 		String email = Teclado.lerTexto("E-mail:");
@@ -94,6 +97,7 @@ public class InfoNote {
 
 		// Usuario user = new Usuario("login:joao", "senha:1234",1);
 
+		int tipo = 1;
 		String logradouro = Teclado.lerTexto("Logradouro:");
 		String numero = Teclado.lerTexto("Nomero: ");
 		String complemento = Teclado.lerTexto("Complemento:");
@@ -101,10 +105,6 @@ public class InfoNote {
 		String cidade = Teclado.lerTexto("Cidade: ");
 		String estado = Teclado.lerTexto("Estado:");
 		String cep = Teclado.lerTexto("Cep: ");
-		if (senha.equals("") || senha == null) {
-			senha = GerarSenha.gerarSenha();
-			System.out.println("Senha gerada: " + senha);
-		}
 		Endereco endereco = new Endereco(logradouro, numero, complemento, bairro, cidade, estado, cep);
 		Cliente cliente = new Cliente(login, senha, tipo, codigoCliente, nome, email, telefone, endereco);
 		clienteGlobal = cliente;
@@ -113,6 +113,7 @@ public class InfoNote {
 		System.out.println("=========================================================");
 		System.out.println(cliente);
 		System.out.println(endereco);
+
 	}
 
 	public void buscarNotebook() {
