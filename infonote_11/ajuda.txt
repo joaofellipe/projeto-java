@@ -1,10 +1,12 @@
 ===================================
-Ajuda InfoNote
+        Ajuda InfoNote
 ===================================
 1) Efetuar Login
-Para efetuar o login é necessário
-que você esteja cadastrado no sis-
-tema.
-2) Cadastrar Cliente
-Será necessário colocar todos os
-campos
+2)Cadastrar Cliente
+3)Buscar notebook
+4)Inserir Notebook no carrinho
+5)Remover Notebook no carrinho
+6)ver Carrinho
+7)Efetuar Compra
+8)Ajuda
+9)Sair
