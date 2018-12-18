@@ -213,6 +213,7 @@ public class InfoNote {
 	public static boolean isNumeric(String str)
 	{try
 	{
+		@SuppressWarnings("unused")
 		int i = Integer.parseInt(str);
 	}
 	catch(NumberFormatException nfe)
